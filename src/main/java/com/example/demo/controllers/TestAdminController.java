@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/admin")
 public class TestAdminController {
     @PreAuthorize("hasAuthority('ADMIN')")
-    @GetMapping("/logs")
+    @GetMapping("/dashboard")
     public ResponseEntity<String> getTestUser(){
-        return new ResponseEntity<>("Logs", HttpStatus.OK);
+        return new ResponseEntity<>("Welcome to Dashboard", HttpStatus.OK);
     }
 }
